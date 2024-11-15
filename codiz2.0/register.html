@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+
+    
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color:teal;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+ /* Navbar CSS starts here*/
+
+.navbar {
+            background-color: rgb(0, 38, 255);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            
+        }
+
+        .navbar img {
+            height: 50px; /* Adjust logo size as needed */
+        }
+
+        .contain {
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+            
+        }
+
+
+
+        .nav-item a{
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            color: rgb(18, 240, 10);
+            text-decoration: none;
+
+        }
+
+
+        .nav-item:hover a{
+            background-color: rgb(110, 240, 212);
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .contain {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Navbar CSS ends here */
+
+
+/* Container for the Form */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Form Styling */
+.form-container {
+    background-color: #bef1f5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.form-container h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #007BFF;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color:  teal;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.form-footer {
+    margin-top: 1.5rem;
+}
+
+.form-footer p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.form-footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 1.5rem;
+    }
+    
+    .form-container h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+</style>
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <img src="./img/IOP.jpeg" alt="Logo">
+        <div class="contain">
+            <div class="nav-item"><a href="./contact_form.html">Contact</a></div>
+            <div class="nav-item"><a href="./dash.html">Dashboard</a></div>
+            <div class="nav-item"><a href="./register.html">Register</a></div>
+            <div class="nav-item"><a href="./NAVBAR.html">Home</a></div>
+        </div>
+        
+    </nav>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Create an Account</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter a password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn">Register</button>
+                </div>
+
+                <div class="form-footer">
+                    <p>Already have an account? <a href="#">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

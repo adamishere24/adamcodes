@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: teal /* Light background color */
+            /* margin: 0px;
+            justify-content: center; */
+        }
+
+               /* Navbar CSS starts here*/
+
+               .navbar {
+            background-color: rgb(0, 38, 255);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+        }
+
+        .navbar img {
+            height: 50px; /* Adjust logo size as needed */
+        }
+
+        .contain {
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        }
+
+
+
+        .nav-item a{
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            color: rgb(18, 240, 10);
+            text-decoration: none;
+
+        }
+
+
+        .nav-item:hover a{
+            background-color: rgb(110, 240, 212);
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .contain {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Navbar CSS ends here */
+
+        
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgb(114, 212, 212, 0.979) ; 
+            background-color: #bef1f5; /* White background for the form */
+        }
+        /* .container{
+            justify-content: center;
+            align-items: center;
+            
+        } */
+        h2 {
+            color: #007bff; /* Bootstrap primary color */
+            text-align: center;
+        }
+        .btn-primary {
+            background-color: teal; /* Green color for submit button */
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #218488; /* Darker green on hover */
+        }
+        .form-control {
+            border-radius: 0.5rem; /* Rounded corners for inputs */
+        }
+
+        .form-group input{
+            background-color: aquamarine;
+            
+        }
+
+        .form-group textarea{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <img src="./img/IOP.jpeg" alt="Logo">
+        <div class="contain">
+            <div class="nav-item"><a href="./contact_form.html">Contact</a></div>
+            <div class="nav-item"><a href="./dash.html">Dashboard</a></div>
+            <div class="nav-item"><a href="#">Register</a></div>
+            <div class="nav-item"><a href="./NAVBAR.html">Home</a></div>
+        </div>
+        
+    </nav>
+
+<div class="container">
+    <h2>Contact Us</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your fullname" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Your message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
